@@ -1,0 +1,23 @@
+<h2>Home</h2>
+
+<p>This is a JAMstack app built with Angular 8</p>
+
+<div class="container">
+
+    <div *ngIf = "data.length === 0">
+      <p>
+        Loading data...
+      </p>
+  
+    </div>
+  
+      <div *ngFor="let article of data" class="card">
+          <img src="{{ article.urlToImage }}">
+                  <div class="card-body">
+                      <h3>{{ article.title }}</h3>
+                      <p> {{ article.description }}</p>
+                      <a href="{{article.url}}">Read story</a>
+                  </div>
+              </div>
+  
+  </div>
