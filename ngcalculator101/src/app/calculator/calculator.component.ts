@@ -70,6 +70,12 @@ export class CalculatorComponent implements OnInit {
     this.operator = op;
     this.waitForSecondNumber=true;
     console.log(this.firstOperand);
+
+    if(op === '='){
+
+      this.currentNumber = this.firstOperand;
+    }
+    
   }
 
   public clear(){
